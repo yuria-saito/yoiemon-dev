@@ -118,13 +118,13 @@
 
   /* product_image_size */
   .product--large .product__media-wrapper {
-    max-width: 66%;
-    width: 66%;
+    max-width: 50%;
+    width: 50%;
   }
 
   .product--large .product__info-wrapper {
-    max-width: 34%;
-    width: 34%;
+    max-width: 50%;
+    width: 50%;
   }
 
   .product--medium .product__media-wrapper,
@@ -134,13 +134,13 @@
   }
 
   .product--small .product__media-wrapper {
-    max-width: 34%;
-    width: 34%;
+    max-width: 50%;
+    width: 50%;
   }
 
   .product--small .product__info-wrapper {
-    max-width: 66%;
-    width: 66%;
+    max-width: 50%;
+    width: 50%;
   }
 
   .product[mount="quick-add-modal"] {
