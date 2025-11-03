@@ -1,5 +1,8 @@
 
-<section id="MainProduct-{{section.id}}" class="page-width section-padding" data-section="{{section.id}}">
+
+
+<section id="MainProduct-{{section.id}}" class="page-width" data-section="{{section.id}}">
+
   {{assign "theme_settings" settings}}
   {{assign "product_form_id" (append "product-form-" section.id)}}
   {{assign "variant_images" (map (where product.images "attached_to_variant" true) "src")}}
@@ -81,6 +84,9 @@
       <script src="{{asset_url 'component-product-photo-swipe.js'}}" defer="defer"></script>
     {{/if}}
   {{/if}}
+
+
+  <!-- 商品詳細 -->
 
   <main-product-detail
     class="product grid grid-cols-1 grid-cols-2-desktop product--left
@@ -440,7 +446,7 @@
                   {{#if block.settings.is_fold}}expand-limit-height{{/if}}"
               >
                 <div class="expand-wrapper">
-                  <div class="product__info-description body3 rte" {{{block.shopline_attributes}}}>
+                  <div class=" product__info-description body3 rte" {{{block.shopline_attributes}}}>
                     {{{product.description}}}
                   </div>
                 </div>

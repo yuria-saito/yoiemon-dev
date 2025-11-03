@@ -1,8 +1,8 @@
 {
   "sections": {
-    "yoi-main-product-info": {
+    "main-product-info": {
       "disabled": false,
-      "type": "yoi-main-product",
+      "type": "main-product",
       "settings": {
         "product_info_sticky": true,
         "product_image_pc_show_style": "thumbnail_flatten",
@@ -147,7 +147,7 @@
     }
   },
   "order": [
-    "yoi-main-product-info",
+    "main-product-info",
     "yoi-common-product-description",
     "yoi-common-product-info"
   ]
