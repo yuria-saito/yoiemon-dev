@@ -1,0 +1,107 @@
+{{snippet "stylesheet" href=(asset_url "section-yoi-index-product.css")}}
+{{assign "handle" product_handle}} {{#unless handle}} {{assign "handle"
+"よいえもん"}} {{/unless}}
+<!-- TODO: ハンドルの入れ替え -->
+<section id="yoi-product" class="yoi-product" data-io>
+  <!-- 和紙 -->
+  <img
+    src="{{asset_url 'image-bg-washi.webp'}}"
+    class="yoi-c-bg-washi"
+    alt=""
+  />
+  <p class="yoi-c-subTitle yoi-product-subtitle">商品について</p>
+  <!-- 成分 -->
+  <div class="yoi-c-container yoi-product_ingredients">
+    <img
+      class="yoi-product_packageImg"
+      src="{{asset_url 'image-yoiemon-package.webp'}}"
+      alt=""
+    />
+    <div class="items">
+      <!-- item -->
+      <div class="yoi-product_ingredients-item">
+        <img
+          class="yoi-product_ingredients-itemImg"
+          src="{{asset_url 'image-ingredient-kotara.webp'}}"
+          alt=""
+        />
+        <div class="text">
+          <h3 class="yoi-text-lg">コタラヒムブツ</h3>
+          <p class="yoi-text-sm-reading">
+            スリランカのみに自生するサラシア属の植物。アセトアルデヒド脱水素酵素（ALDH）活性をサポートするものです。
+          </p>
+        </div>
+      </div>
+      <!-- item -->
+      <div class="yoi-product_ingredients-item">
+        <img
+          class="yoi-product_ingredients-itemImg"
+          src="{{asset_url 'image-ingredient-kobo.webp'}}"
+          alt=""
+        />
+        <div class="text">
+          <h3 class="yoi-text-lg">酵母エキス</h3>
+          <p class="yoi-text-sm-reading">
+            アミノ酸やビタミンB群が豊富。
+            体内の代謝をサポートし、疲労回復やお酒の分解をスムーズに促します。自然由来で安心なのも魅力です。
+          </p>
+        </div>
+      </div>
+      <!-- item -->
+      <div class="yoi-product_ingredients-item">
+        <img
+          class="yoi-product_ingredients-itemImg"
+          src="{{asset_url 'image-ingredient-ukon.webp'}}"
+          alt=""
+        />
+        <div class="text">
+          <h3 class="yoi-text-lg">ウコン</h3>
+          <p class="yoi-text-sm-reading">
+            飲酒時の定番成分。
+            クルクミンという抗酸化成分を含み、肝機能をサポートします。飲んだ翌朝のすっきり感を求める方の強い味方です。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 酢酸菌酵素とは？ -->
+  <!-- SP画像 -->
+  <img
+    class="yoi-product_vinegar-img-sp"
+    src="{{asset_url 'image-vinegar-sp.webp'}}"
+    alt=""
+  />
+  <div class="yoi-c-container yoi-product_vinegar">
+    <div class="text">
+      <h3 class="yoi-text-base">
+        <span class="yoi-text-2xl">酢酸菌酵素</span>とは？
+      </h3>
+      <div class="mt-24 yoi-text-base-reading">
+        <p>酢酸酵母とは、お酢を発酵させる過程で生まれる天然の酵母菌です。</p>
+        <p>
+          近年の研究では、酢酸酵母に含まれる酵素が、アルコールの分解をサポートし、体への負担を軽減することがわかってきました。
+        </p>
+        <p>
+          よいえもんに使用している酢酸酵母は、厳選された菌株から丁寧に培養したものを使用。自然由来の力で、翌朝のスッキリ感を後押しします。
+        </p>
+        <p>
+          これまでの「飲む前」「飲んだ後」サプリとは異なり、根本的な体調ケアを目指す、新しいアプローチです。
+        </p>
+        <p>飲むことを楽しみたいすべての人に、確かな安心を届けます。</p>
+      </div>
+    </div>
+    <img
+      class="yoi-product_vinegar-img"
+      src="{{asset_url 'image-vinegar.webp'}}"
+      alt=""
+    />
+  </div>
+  {{#if show_button}}
+  <a
+    href="/products/"
+    class="yoi-c-button yoi-text-sm yoi-product_button"
+  >
+    よいえもんを試してみる
+  </a>
+  {{/if}}
+</section>

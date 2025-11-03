@@ -1,0 +1,39 @@
+{
+  "sections": {
+    "yoi-index-hero": {
+      "type": "yoi-index-hero"
+    },
+    "yoi-index-about": {
+      "type": "yoi-index-about"
+    },
+    "yoi-common-product-description": {
+      "type": "yoi-common-product-description"
+    },
+    "yoi-index-voice": {
+      "type": "yoi-index-voice"
+    },
+    "yoi-common-product-info": {
+      "type": "yoi-common-product-info"
+    },
+    "yoi-index-cta": {
+      "type": "yoi-index-cta"
+    }
+  },
+  "order": [
+    "yoi-index-hero",
+    "yoi-index-about",
+    "yoi-common-product-description",
+    "yoi-index-voice",
+    "yoi-common-product-info",
+    "yoi-index-cta",
+    "featured-slideshow",
+    "collection-list",
+    "featured-collection",
+    "text-with-image",
+    "video",
+    "featured-collection-2",
+    "picture-promotion",
+    "blog",
+    "sign-up-and-save"
+  ]
+}

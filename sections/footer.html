@@ -1,0 +1,234 @@
+{{snippet "stylesheet" href=(asset_url "component-dropdown-menu.css")}}
+{{snippet "stylesheet" href=(asset_url "section-footer.css")}} {{snippet
+"stylesheet" href=(asset_url "snippet-tips-card.css")}}
+<script src="{{asset_url 'component-localization-form.js'}}" defer></script>
+<script src="{{asset_url 'component-dropdown-menu.js'}}" defer></script>
+<script src="{{asset_url 'section-footer.js'}}" defer></script>
+
+{{#if request.design_mode}}
+<script src="{{asset_url 'theme-editor.js'}}" defer="defer"></script>
+{{/if}} {{assign "theme_settings" settings}} {{assign "settings"
+section.settings}} {{assign "col" section.settings.blocks_col}} {{#if (length
+section.blocks) < col}} {{assign "col" (length section.blocks)}} {{/if}}
+{{assign "align_type" (append "footer_content_" (default
+section.settings.align_type "left"))}} {{assign "show_social_logos"
+section.settings.show_social_media}} {{assign "show_letter"
+section.settings.show_letter_subscribe}} {{assign "letter_is_block_up" false}}
+{{#if section.settings.letter_show_type == "up"}} {{assign "letter_is_block_up"
+true}} {{/if}} {{assign "media_is_block_up" false}} {{#if
+section.settings.media_show_type == "up"}} {{assign "media_is_block_up" true}}
+{{/if}} {{#for section.blocks as |block|}} {{#if block.type == "image" and
+block.settings.image_full_width}} {{assign "m_col" (minus (length
+section.blocks) 1)}} {{#if m_col < col}} {{assign 'col' m_col}} {{/if}} {{/if}}
+{{/for}} {{assign "has_social_logos" false}} {{#if
+theme_settings.social_facebook_link or theme_settings.social_twitter_link or
+theme_settings.social_pinterest_link or theme_settings.social_instagram_link or
+theme_settings.social_snapchat_link or theme_settings.social_tiktok_link or
+theme_settings.social_youtube_link or theme_settings.social_vimeo_link or
+theme_settings.social_tumblr_link or theme_settings.social_linkedin_link or
+theme_settings.social_whatsapp_link or theme_settings.social_line_link or
+theme_settings.social_kakao_link }} {{assign "has_social_logos" true}} {{/if}}
+{{#unless has_social_logos}} {{assign "show_social_logos" false}} {{/unless}}
+{{assign "is_db_col" false}} {{#if (isFalsey
+section.settings.letter_pc_show_row) and (isFalsey
+section.settings.media_pc_show_row)}} {{assign "is_db_col" true}} {{/if}}
+{{assign "is_db_show" false}} {{#if show_letter and show_social_logos}} {{assign
+"is_db_show" true}} {{/if}}
+<footer
+  class="footer section-footer-padding color-scheme-{{settings.color_scheme}} {{align_type}}"
+  style="--padding-top:{{default (append section.settings.padding_top 'px') '40px'}};--padding-bottom:{{default
+    (append section.settings.padding_bottom 'px')
+    '40px'
+  }};--padding-left:{{default (append section.settings.padding_left 'px') '30px'}};--padding-right:{{default
+    (append section.settings.padding_right 'px')
+    '30px'
+  }};--media-icon-width:{{section.settings.media_icon_width}}px;--media-icon-padding:{{section.settings.media_icon_padding}}px;"
+>
+  <div class="yoi-footer">
+    <div class="yoi-footer__inner yoi-c-container">
+      <!-- 上 -->
+      <div class="yoi-footer__top">
+        <a href="/" class="yoi-text-2xl">よいえもん</a>
+        <nav class="yoi-footer__nav" aria-label="フッターナビゲーション">
+          <ul class="yoi-footer__nav-list yoi-text-lg">
+            <li>
+              <a href="/" class="yoi-footer__nav-link yoi-text-lg">トップ</a>
+            </li>
+            <li>
+              <a href="/#yoi-about" class="yoi-footer__nav-link yoi-text-lg"
+                >ストーリー</a
+              >
+            </li>
+            <li>
+              <a
+                href="/#shopline-section-yoi-common-product-description"
+                class="yoi-footer__nav-link yoi-text-lg"
+                >商品</a
+              >
+            </li>
+            <li>
+              <a href="/cart" class="yoi-footer__nav-link yoi-text-lg"
+                >カート</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- 下 -->
+      <div class="yoi-footer__bottom">
+        <div>
+          <p class="yoi-text-sm">株式会社SYNKEN</p>
+          <p class="yoi-text-sm mt-4">
+            東京都港区西麻布四丁目14番19号<br
+              class="yoi-footer__adress-br"
+            />お問い合わせ先 050-1725-9155
+          </p>
+        </div>
+
+        <div class="yoi-footer__policies">
+          <!-- TODO: リンクの入れ替え -->
+          <a href="/pages/privacy-policy" class="yoi-text-sm"
+            >プライバシーポリシー</a
+          >
+          <!-- TODO: リンクの入れ替え -->
+          <a href="/pages/tokushoho" class="yoi-text-sm"
+            >特定商取引に関する法律に基づく表示</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{#for section.blocks as |block|}} {{#if block.type == "image" and
+  block.settings.image_full_width}}
+  <div class="footer-block--full page-width" {{{block.shopline_attributes}}}>
+    {{#if block.settings.image.url}}
+    <div class="footer-block__details-content footer-block-image">
+      {{snippet "image" data=block.settings.image}}
+    </div>
+    {{/if}}
+  </div>
+  {{/if}} {{/for}}
+  <div
+    class="footer__content-bottom page-width
+      {{#if section.settings.copyright_show_type == 'vertical'}}content_vertical{{/if}}"
+  >
+    <div
+      class="footer__copyright body6
+        {{#if section.settings.copyright_menu_type == 'copyright_left'}}corner-content__left{{/if}}"
+    >
+      <div class="copyright-menu-box">
+        {{#for section.settings.copyright_menu.links as |link|}} {{#if
+        forloop.index0 > 0}}
+        <div class="line body5">|</div>
+        {{/if}}
+        <div class="footer-menu--item body5">
+          <a
+            href="{{default link.url 'javascript:;'}}"
+            class="link link--text list-menu__item list-menu__item--link"
+          >
+            {{link.title}}
+          </a>
+        </div>
+        {{/for}}
+      </div>
+      {{#capture "storeName"}}
+      <a href="{{routes.root_url}}">{{shop.name}}</a>
+      {{/capture}}
+      <small class="copyright__content"
+        >{{{t "general.footer.copyright" year=(date 'now' '%Y')
+        storeName=storeName}}}</small
+      >
+    </div>
+    <div class="footer__content-bottom-wrapper">
+      {{#if settings.show_locale_selector and (gt (length
+      localization.available_languages) 1)}} {{ assign 'show_locale_selector'
+      true}} {{/if}} {{#if settings.show_country_selector and (gt (length
+      localization.available_countries) 1)}} {{ assign 'show_country_selector'
+      true}} {{/if}} {{#if show_locale_selector or show_country_selector}}
+      <div class="footer__column footer__localization">
+        <localization-form>
+          {{#form "localization" id="localization-form"
+          enctype="multipart/form-data" accept-charset="UTF-8"}} {{#if
+          show_locale_selector}}
+          <dropdown-menu>
+            <div class="dropdown-menu">
+              <input
+                type="hidden"
+                name="locale_code"
+                value="{{localization.language.iso_code}}"
+              />
+              <button
+                class="button button--secondary dropdown-menu__button"
+                type="button"
+              >
+                <span data-label>{{localization.language.endonym_name}}</span>
+                {{snippet "icon-arrow"}}
+              </button>
+              <div
+                class="dropdown-menu__list-wrapper top global-modal-border-shadow body4"
+                hidden
+              >
+                <ul class="dropdown-menu__list list-unstyled">
+                  {{#for localization.available_languages as |language|}}
+                  <li>
+                    <a href="javascript:;" data-value="{{language.iso_code}}"
+                      >{{language.endonym_name}}</a
+                    >
+                  </li>
+                  {{/for}}
+                </ul>
+              </div>
+            </div>
+          </dropdown-menu>
+          {{/if}} {{#if show_country_selector}}
+          <dropdown-menu>
+            <div class="dropdown-menu">
+              <input
+                type="hidden"
+                name="country_code"
+                value="{{localization.country.iso_code}}"
+              />
+              <button
+                class="button button--secondary dropdown-menu__button"
+                type="button"
+              >
+                <span data-label
+                  >{{localization.country.name}}（{{localization.country.currency.iso_code}}
+                  {{localization.country.currency.symbol}}）</span
+                >
+                {{snippet "icon-arrow"}}
+              </button>
+              <div
+                class="dropdown-menu__list-wrapper top align--right global-modal-border-shadow body4"
+                hidden
+              >
+                <ul class="dropdown-menu__list list-unstyled">
+                  {{#for localization.available_countries as |country|}}
+                  <li>
+                    <a href="javascript:;" data-value="{{country.iso_code}}">
+                      {{country.name}}（{{country.currency.iso_code}}
+                      {{country.currency.symbol}}）
+                    </a>
+                  </li>
+                  {{/for}}
+                </ul>
+              </div>
+            </div>
+          </dropdown-menu>
+          {{/if}} {{/form}}
+        </localization-form>
+      </div>
+      {{/if}}
+      <div class="footer__column footer__column--info">
+        {{#if settings.show_pay_channel.show}}
+        <div class="footer__payment">
+          {{#for settings.show_pay_channel.pay_channel_list as
+          |pay_channel_item|}} {{payment_type_svg_tag pay_channel_item.type}}
+          {{/for}}
+        </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</footer>

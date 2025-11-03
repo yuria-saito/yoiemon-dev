@@ -1,0 +1,135 @@
+/* ==========================
+   yoi-product section
+   ========================== */
+
+.yoi-product {
+  position: relative;
+  padding: 104px 0;
+  z-index: 0;
+}
+.yoi-product-subtitle {
+  position: absolute;
+  top: 0px;
+  left: 128px;
+}
+.yoi-product_ingredients {
+  display: grid;
+  grid-column: 12;
+  gap: 32px;
+  align-items: center;
+  padding-top: 104px;
+}
+.yoi-product_packageImg {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.yoi-product_ingredients .items {
+  grid-column-start: 5;
+  grid-column-end: 13;
+}
+.yoi-product_ingredients-item {
+  position: relative;
+  padding: 24px 0px 0px 80px;
+}
+.yoi-product_ingredients-itemImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 128px;
+  height: 128px;
+  margin-right: 16px;
+}
+.yoi-product_ingredients-item .text {
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 20px 20px 72px;
+}
+.yoi-product_vinegar {
+  display: flex;
+  align-items: start;
+  gap: 32px;
+  margin-top: 104px;
+}
+.yoi-product_vinegar-img-sp {
+  display: none;
+}
+.yoi-product_vinegar .text {
+  flex: 1;
+  width: 100%;
+}
+
+.yoi-product_vinegar img {
+  width: 100%;
+  height: auto;
+  max-width: 448px;
+}
+
+.yoi-product_button {
+  width: 100%;
+  max-width: 320px;
+  margin: 104px auto 0;
+}
+
+/* サブタイトル */
+@media (max-width: 1300px) {
+  .yoi-product-subtitle {
+    left: 0px;
+  }
+}
+
+/* タブレット */
+@media (max-width: 959px) {
+  .yoi-product_ingredients {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 0;
+  }
+  .yoi-product_packageImg {
+    grid-column-end: 13;
+    width: 80%;
+    max-width: 440px;
+    min-width: 330px;
+    padding: 0 64px;
+    margin: 0 auto;
+  }
+  .yoi-product_ingredients .items {
+    grid-column-start: 1;
+  }
+  .yoi-product_vinegar-img {
+    display: none;
+  }
+  .yoi-product_vinegar-img-sp {
+    mix-blend-mode: multiply;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 64px;
+  }
+  .yoi-product_vinegar {
+    margin-top: 24px;
+  }
+}
+
+/* スマホ */
+@media (max-width: 640px) {
+  .yoi-product_ingredients-item {
+    position: relative;
+    padding: 8px 0px 0px 48px;
+  }
+  .yoi-product_ingredients-item .text {
+    padding-left: 32px;
+  }
+  .yoi-product_ingredients-itemImg {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+/* さらに小さいデバイス（iPhone SEなど） */
+@media (max-width: 425px) {
+}

@@ -1,0 +1,88 @@
+/* ==========================
+   yoi-voice section
+   ========================== */
+
+.yoi-voice {
+  position: relative;
+  padding: 104px 0;
+  z-index: 0;
+}
+.yoi-voice_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+.yoi-voice-subtitle {
+  position: absolute;
+  top: 0px;
+  left: 128px;
+}
+.yoi-voice_container {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 32px;
+}
+.yoi-voice_card {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  padding: 1rem;
+}
+.yoi-voice_card .user {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  color: var(--gray-500);
+}
+.yoi-voice_card .user img {
+  width: 56px;
+  height: 56px;
+}
+.yoi-voice_card .text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+.yoi-voice_card .text p {
+  margin: 0;
+}
+
+/* タブレット/モバイルで1列 or 2列に落とす */
+@media (max-width: 1024px) {
+  .yoi-voice_card {
+    grid-column: span 6;
+  } /* 2列 */
+}
+@media (max-width: 640px) {
+  .yoi-voice_card {
+    grid-column: span 12;
+  } /* 1列 */
+  .yoi-voice_container {
+    gap: 16px;
+  }
+}
+
+/* サブタイトル */
+@media (max-width: 1300px) {
+  .yoi-voice-subtitle {
+    left: 0px;
+  }
+}
+
+/* タブレット */
+@media (max-width: 959px) {
+}
+
+/* スマホ */
+@media (max-width: 640px) {
+}
+
+/* さらに小さいデバイス（iPhone SEなど） */
+@media (max-width: 425px) {
+}

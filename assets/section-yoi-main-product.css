@@ -1,0 +1,78 @@
+/* ==========================
+section-yoi-main-product section
+   ========================== */
+
+.yoi-main-product {
+  position: relative;
+  max-width: 959px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 88px 0;
+  color: var(--black);
+}
+.yoi-main-product .yoi-main-product_title {
+  font-size: var(--yoi-fs-2xl);
+  line-height: var(--yoi-lh-155);
+  color: var(--black);
+}
+
+.yoi-product__info-description {
+  margin-top: 40px;
+}
+.yoi-product__info-description span {
+  margin-top: 16px;
+}
+.yoi-product__info-description p {
+  line-height: 2;
+}
+
+@media screen and (min-width: 960px) {
+  .product--large .yoi-product__media-wrapper {
+    width: 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .product--large .yoi-product__info-wrapper {
+    width: 50%;
+    max-width: 50%;
+  }
+}
+/* サブタイトル */
+@media (max-width: 1300px) {
+}
+
+/* タブレット */
+@media (max-width: 959px) {
+  .yoi-main-product {
+    padding: 88px 16px;
+  }
+}
+
+/* スマホ */
+@media (max-width: 640px) {
+}
+
+/* さらに小さいデバイス（iPhone SEなど） */
+@media (max-width: 425px) {
+}
+
+.yoi-main-product [id^="ProductInfo-"] .product-title {
+  --title-font-size: 28px !important;
+  line-height: 1.45;
+}
+@media (max-width: 959px) {
+  .yoi-main-product [id^="ProductInfo-"] .product-title {
+    --title-font-size: 22px !important;
+    line-height: 1.4;
+  }
+}
+
+.yoi-main-product .product-title {
+  font-size: 28px !important;
+}
+@media (max-width: 959px) {
+  .yoi-main-product .product-title {
+    font-size: 22px !important;
+  }
+}

@@ -1,0 +1,97 @@
+/* ==========================
+   yoi-product-info section
+   ========================== */
+
+.yoi-product-info {
+  position: relative;
+  padding: 80px 0;
+  background: var(--green-500);
+  color: var(--white);
+}
+
+.yoi-product-info_container {
+}
+
+/* <!-- 仕様・成分一覧（テーブル） --> */
+
+.yoi-spec-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.yoi-spec-table__th {
+  padding: 16px;
+  text-align: left;
+  width: 30%;
+  vertical-align: top;
+  border-bottom: solid 1px #2f5359;
+}
+
+.yoi-spec-table__td {
+  padding: 16px;
+  vertical-align: top;
+  border-bottom: solid 1px #2f5359;
+}
+
+/* <!-- 注意事項 --> */
+.yoi-common-product-info__notice {
+  width: 100%;
+  max-width: 600px;
+  margin: 48px auto 0;
+}
+
+.yoi-common-product-info__noticeTitle {
+  text-align: center;
+}
+
+.yoi-common-product-info__noticeUl {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 1rem;
+  line-height: 1.5;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* <!-- お問い合わせボックス --> */
+.yoi-common-product-info__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  margin-top: 80px;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.yoi-common-product-info__contactTitle {
+  border-bottom: solid 1px var(--gold-500);
+}
+
+.yoi-common-product-info__tel {
+  color: var(--green-500);
+}
+
+/* Organization Section Styles */
+.yoi-common-product-info__org {
+  border-radius: 8px;
+  margin: 0;
+}
+
+.yoi-org__row {
+  display: flex;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--green-200);
+}
+.yoi-org__row dt {
+  display: flex;
+  width: 5rem;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.yoi-org__row:last-child {
+  border-bottom: none;
+}

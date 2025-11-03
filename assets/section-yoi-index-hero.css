@@ -1,0 +1,111 @@
+/* ==========================
+   yoi-hero section
+   ========================== */
+.yoi-hero {
+  position: relative;
+  background: var(--green-500);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 72px;
+  padding-bottom: 56px;
+}
+.yoi-hero_inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+}
+.yoi-hero_h1 {
+  font-size: 46px;
+  text-align: center;
+  line-height: 1.5;
+}
+.yoi-hero_h1 span {
+  display: block;
+  font-size: 60px;
+}
+.yoi-hero_package {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 272px;
+  margin: 56px auto;
+}
+.yoi-hero_package img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.yoi-hero_badge {
+  position: absolute;
+  top: -56px;
+  right: -80px;
+  width: 137px;
+  height: 137px;
+  text-align: center;
+  padding: 30px 0;
+  background-color: var(--red-500);
+  color: var(--white);
+  line-height: 130%;
+  border-radius: 100px;
+  font-size: 30px;
+}
+.yoi-hero_badge span {
+  font-size: 14px;
+  display: inline;
+}
+.yoi-hero_bg {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+.yoi-hero_bg-sp {
+  display: none;
+}
+
+/* タブレット */
+@media (max-width: 959px) {
+}
+
+/* スマホ */
+@media (max-width: 640px) {
+  .yoi-hero_h1 {
+    font-size: 22px;
+  }
+  .yoi-hero_h1 span {
+    font-size: 35px;
+  }
+  .yoi-hero_package {
+    margin-top: 108px;
+  }
+  .yoi-hero_badge {
+    top: -80px;
+    right: -40px;
+  }
+}
+
+/* さらに小さいデバイス（iPhone SEなど） */
+@media (max-width: 425px) {
+  .yoi-hero_bg {
+    display: none;
+  }
+  .yoi-hero_bg-sp {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,122 @@
+/* ==========================
+   yoi-about section
+   ========================== */
+
+.yoi-about {
+  position: relative;
+  background: #00282c;
+  /* 富士山の色 */
+  padding: 56px 0 56px 56px;
+}
+.yoi-about_inner {
+  position: relative;
+  margin-left: 56px;
+  z-index: 1;
+  color: var(--white);
+  width: calc(100% - 56px);
+  padding: 64px 200px;
+}
+.yoi-about_inner-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.yoi-about_inner-bg span {
+  width: 40%;
+  background: linear-gradient(180deg, #00373b 0%, #004f53 100%);
+}
+.yoi-about_inner-bg img {
+  width: 60%;
+  height: auto;
+  object-fit: cover;
+  z-index: -1;
+}
+.yoi-about_subtitle {
+  position: absolute;
+  top: 0px;
+  left: 104px;
+}
+.yoi-about_inner-content {
+  width: 100%;
+  max-width: 959px;
+}
+.yoi-about_inner-content h2 {
+  font-size: 40px;
+  line-height: 1.55;
+  margin-bottom: 40px;
+  font-family: var(--yoi-font-serif);
+}
+.yoi-about_text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.yoi-about_text-wrap p {
+  margin: 0px;
+}
+
+.yoi-about-message {
+  background: var(--green-500);
+  color: var(--white);
+  padding: 56px 0;
+  text-align: center;
+  font-size: 40px;
+  line-height: 1.55;
+}
+.yoi-about-message p {
+  margin: 0;
+}
+.yoi-about-message span {
+  font-size: 46px;
+  display: block;
+}
+
+/* サブタイトル */
+@media (max-width: 1300px) {
+  .yoi-about_subtitle {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+}
+
+/* タブレット */
+@media (max-width: 959px) {
+  .yoi-about {
+    padding: 0px;
+  }
+  .yoi-about_inner {
+    margin-left: 0px;
+    width: 100%;
+    padding: 64px 0;
+  }
+  .yoi-about_inner-bg span {
+    width: 0%;
+  }
+  .yoi-about_inner-bg img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+  }
+}
+
+/* スマホ */
+@media (max-width: 640px) {
+  .yoi-about-message {
+    font-size: var(--yoi-fs-lg);
+  }
+
+  .yoi-about-message span {
+    font-size: var(--yoi-fs-2xl);
+  }
+}
+
+/* さらに小さいデバイス（iPhone SEなど） */
+@media (max-width: 425px) {
+}
