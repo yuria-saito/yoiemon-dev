@@ -355,6 +355,14 @@
     column-gap: var(--media-grid-vertical-space);
     row-gap: var(--media-grid-horizontal-space);
   }
+  /* 追記 */
+  .product--large {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding-bottom: 24px;
+  }
+  /* 追記 */
+
   .product--large .thumbnail-list.thumbnail-list-grid .thumbnail-list__item {
     width: calc((100% - var(--media-grid-horizontal-space) * 5) / 6);
   }

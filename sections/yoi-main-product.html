@@ -1,7 +1,7 @@
 
 
 
-<section id="MainProduct-{{section.id}}" class="page-width yoi-main-product" data-section="{{section.id}}">
+<section id="MainProduct-{{section.id}}" class="page-width" data-section="{{section.id}}">
 
   {{assign "theme_settings" settings}}
   {{assign "product_form_id" (append "product-form-" section.id)}}
@@ -62,7 +62,6 @@
   {{snippet "stylesheet" href=(asset_url "component-accordion.css")}}
   {{snippet "stylesheet" href=(asset_url "section-main-product-media-gallery.css")}}
   {{snippet "stylesheet" href=(asset_url "component-price.css")}}
-  {{snippet "stylesheet" href=(asset_url "section-yoi-main-product.css")}}
   {{#if product.quantity_price_breaks_configured}}
     {{snippet "stylesheet" href=(asset_url "component-volume-pricing.css")}}
     <script src="{{asset_url 'price-per-item.js'}}" defer="defer"></script>
@@ -105,7 +104,7 @@
     data-product-id="{{product.id}}"
   >
     
-    <div class="product__media-wrapper yoi-product__media-wrapper">
+    <div class="product__media-wrapper">
       {{snippet
         "product-media-gallery"
         variant_images=variant_images
@@ -118,7 +117,7 @@
       }}
     </div>
     
-    <div class="product__info-wrapper yoi-product__info-wrapper">
+    <div class="product__info-wrapper">
       <product-info
         data-section="{{section.id}}"
         id="ProductInfo-{{section.id}}"
@@ -357,7 +356,7 @@
                   }
                 }
             </style>
-            <h1 class="product__info-item product-title m-12 yoi-main-product_title" {{{block.shopline_attributes}}}>{{product.title}}</h1>
+            <h1 class="product__info-item product-title m-12" {{{block.shopline_attributes}}}>{{product.title}}</h1>
           {{else if block.type == "variant_sku"}}
             <div
               class="product__info-item body4 m-12"
@@ -447,7 +446,7 @@
                   {{#if block.settings.is_fold}}expand-limit-height{{/if}}"
               >
                 <div class="expand-wrapper">
-                  <div class=" product__info-description body3 rte yoi-product__info-description" {{{block.shopline_attributes}}}>
+                  <div class=" product__info-description body3 rte" {{{block.shopline_attributes}}}>
                     {{{product.description}}}
                   </div>
                 </div>
